@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.ecowatt.screens.HomeScreen
 import com.example.ecowatt.ui.theme.EcoWattTheme
 import com.example.ecowatt.screens.OnboardingScreen
 
@@ -14,7 +15,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             EcoWattTheme {
-                OnboardingScreen()
+//                OnboardingScreen()
+                HomeScreen()
             }
         }
     }
