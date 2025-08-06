@@ -19,9 +19,10 @@ import androidx.compose.ui.unit.sp
 import com.example.ecowatt.R
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.ecowatt.viewModel.AuthViewModel
 
 @Composable
-fun OnboardingScreen() {
+fun OnboardingScreen( onFinished: () -> Unit = {}) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -80,7 +81,7 @@ fun OnboardingScreen() {
             Spacer(modifier = Modifier.height(170.dp))
 
             Button(
-                onClick = { /* Navigate to login or home */ },
+                onClick = { onFinished() },
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2E7D32)), // green
                 shape = RoundedCornerShape(12.dp),
                 modifier = Modifier
