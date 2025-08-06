@@ -23,8 +23,8 @@ class MainActivity : ComponentActivity() {
             EcoWattTheme {
                 val navController = rememberNavController()
                 val authViewModel = AuthViewModel()
-//                AppNavGraph(navController, authViewModel)
-                ForgotPasswordScreen(navController, authViewModel)
+                AppNavGraph(navController, authViewModel)
+//                ForgotPasswordScreen(navController, authViewModel)
             }
         }
     }

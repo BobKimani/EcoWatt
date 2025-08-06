@@ -38,6 +38,7 @@ fun SignInScreen(
         modifier = Modifier
             .fillMaxSize()
             .background(Color(0xFFE8F5E9))
+            .padding(WindowInsets.systemBars.asPaddingValues())
             .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {

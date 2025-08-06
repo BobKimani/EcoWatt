@@ -26,7 +26,8 @@ fun OnboardingScreen( onFinished: () -> Unit = {}) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFE8F5E9)), // light mint-green
+            .background(Color(0xFFE8F5E9))
+            .padding(WindowInsets.systemBars.asPaddingValues()), // light mint-green
         contentAlignment = Alignment.Center
     ) {
         Column(
