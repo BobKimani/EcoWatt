@@ -43,7 +43,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.13" // Match your Compose version
+        kotlinCompilerExtensionVersion = "1.5.13" // match Compose Compiler to Kotlin
     }
 }
 
@@ -51,25 +51,18 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.bundles.compose)
     implementation(libs.androidx.material3)
-
-    // Lifecycle & ViewModel
+    implementation(libs.androidx.compose.material.icons.core)
+    implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.viewmodel.compose)
     implementation(libs.androidx.lifecycle.runtime.ktx)
-
-    // Navigation
     implementation(libs.navigation.compose)
-
-    // Firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth)
-
-    // Icons
-    implementation(libs.androidx.compose.material.icons.core)
-    implementation(libs.androidx.compose.material.icons.extended)
-
-    // UI Testing (optional)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.ui.test.junit4)
+    androidTestImplementation(libs.androidx.espresso.core)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 }
